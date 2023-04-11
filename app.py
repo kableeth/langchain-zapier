@@ -47,9 +47,12 @@ class UpdateNotionIntentHandler(AbstractRequestHandler):
         return ask_utils.is_intent_name("UpdateNotionIntent")(handler_input)
 
     def handle(self, handler_input):
-         #send to Zapier & Notion
-        agent.run("Add Buy new Shoes as a task")
-        speak_output = "Shoes have been added!"
+        #get value from voice input
+        request_text = handler_input.request_envelope.request.intent.slots["Text"].value
+        print(request_text)
+        #send to Zapier & Notion
+        agent.run(request_text)
+        speak_output = request_text
 
         return (
             handler_input.response_builder
@@ -96,6 +99,7 @@ app = Flask(__name__)
 
 sb = SkillBuilder()
 sb.add_request_handler(UpdateNotionIntentHandler())
+sb.add_request_handler(SessionEndedRequestHandler())
 sb.add_exception_handler(CatchAllExceptionHandler())
 
 #ROUTES
@@ -103,7 +107,6 @@ sb.add_exception_handler(CatchAllExceptionHandler())
 def process_text():
     print('before SkillBuilder')
     payload = request.json
-
     skill = sb.create()
     request_envelope = skill.serializer.deserialize(payload=json.dumps(payload), obj_type=RequestEnvelope)
     response_envelope = skill.invoke(request_envelope=request_envelope, context=None)
