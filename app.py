@@ -1,10 +1,10 @@
 import os
 import logging
 import json
+import asyncio
 from pprint import pprint
 from pyngrok import ngrok
 from flask import Flask, request, jsonify
-
 #Alexa Skill Libraries
 import ask_sdk_core.utils as ask_utils
 from ask_sdk_core.skill_builder import SkillBuilder
@@ -51,7 +51,7 @@ class UpdateNotionIntentHandler(AbstractRequestHandler):
         request_text = handler_input.request_envelope.request.intent.slots["Text"].value
         print(request_text)
         #send to Zapier & Notion
-        agent.run(request_text)
+        asyncio.run(agent.run(request_text))
         speak_output = request_text
 
         return (
