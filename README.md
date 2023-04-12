@@ -32,27 +32,24 @@ pip install -r requirements.txt
 
 3. Set up your environment variables:
 
-````
-
-```bash
+```
 export OPENAI_API_KEY="your_openai_api_key"
 export ZAPIER_NLA_API_KEY="your_zapier_nla_api_key"
-````
+```
 
 4. Run the Flask server:
 
-```bash
+```
 python app.py
 ```
 
 5. Create an Alexa Skill on the Amazon Developer Console:
-
-*Use the Amazon Developer Console to create an Alexa Skill.
-*Set the skill's invocation name.
-*Add the required intents and slots, such as UpdateNotionIntent and Text.
-*Import the included interactive model JSON file.
-*Set up the endpoint for the skill using the ngrok URL provided when you run the Flask server (e.g., https://your_ngrok_url/process_text).
-*Save and build your skill.
+   *Use the Amazon Developer Console to create an Alexa Skill.
+   *Set the skill's invocation name.
+   *Add the required intents and slots, such as UpdateNotionIntent and Text.
+   *Import the included interactive model JSON file.
+   *Set up the endpoint for the skill using the ngrok URL provided when you run the Flask server (e.g., https://your_ngrok_url/process_text).
+   *Save and build your skill.
 
 *Use the Amazon Developer Console or an Alexa-enabled device to test the skill.
 *Invoke the skill and provide input to add information to the Notion database.
