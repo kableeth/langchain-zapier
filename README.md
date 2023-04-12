@@ -1,6 +1,6 @@
 # Alexa Notion Integration using Langchain Agent and Zapier NLA
 
-This project connects Alexa to Notion using Langchain Agent and Zapier NLA to manipulate a Notion database. The original goal was to add information to a Notion database called "Activities" dynamically through Alexa. The project was abandoned due to limitations in how Alexa passes instructions to Langchain (OpenAI). It may be more suitable for an app that Alexa doesn't already provide.
+This project connects Alexa to Notion using Langchain Agent and Zapier NLA to manipulate a Notion database. The original goal was to add information to a Notion database called "Activities" dynamically through Alexa. The interactive model JSON file is included, but the skill will still need to be set up, and the endpoint will need to be updated to point to your ngrok server address.
 
 ## Prerequisites
 
@@ -47,8 +47,9 @@ python app.py
 *Use the Amazon Developer Console to create an Alexa Skill.
 *Set the skill's invocation name.
 *Add the required intents and slots, such as UpdateNotionIntent and Text.
+*Import the included interactive model JSON file.
 *Set up the endpoint for the skill using the ngrok URL provided when you run the Flask server (e.g., https://your_ngrok_url/process_text).
-\*Save and build your skill. 6. Test your Alexa Skill:
+*Save and build your skill.
 
 *Use the Amazon Developer Console or an Alexa-enabled device to test the skill.
 *Invoke the skill and provide input to add information to the Notion database.
