@@ -1,0 +1,54 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my notion",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "UpdateNotionIntent",
+                    "slots": [
+                        {
+                            "name": "Text",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "add {Text} as a task in my dashboard",
+                        "put {Text} as a task in my dashboard",
+                        "put {Text} as a task in my activities",
+                        "add {Text} as a task in my activities",
+                        "add {Text} to my board",
+                        "put {Text} to my dashboard",
+                        "save {Text} as a task in my dashboard",
+                        "save {Text} in my dashboard",
+                        "record {Text} as a task in my activities",
+                        "Save a new task called {Text} ",
+                        "Add {Text} to my dashboard",
+                        "Add a new item to Activities with the name {Text}",
+                        "Save {Text} as a task in Activities",
+                        "Put {Text} in my Activities",
+                        "Log {Text} as a task in my Activities",
+                        "Add a task to Activities called {Text} ",
+                        "Add {Text} to my Activities"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
