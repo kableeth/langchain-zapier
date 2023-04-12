@@ -44,23 +44,26 @@ python app.py
 ```
 
 5. Create an Alexa Skill on the Amazon Developer Console:
-   *Use the Amazon Developer Console to create an Alexa Skill.
-   *Set the skill's invocation name.
-   *Add the required intents and slots, such as UpdateNotionIntent and Text.
-   *Import the included interactive model JSON file.
-   *Set up the endpoint for the skill using the ngrok URL provided when you run the Flask server (e.g., https://your_ngrok_url/process_text).
-   *Save and build your skill.
+   - Use the Amazon Developer Console to create an Alexa Skill.
+   - Set the skill's invocation name.
+   - Add the required intents and slots, such as UpdateNotionIntent and Text.-
+   - Import the included interactive model JSON file.
+   - Set up the endpoint for the skill using the ngrok URL provided when you run the Flask server (e.g., https://your_ngrok_url/process_text).
+6. Save and build your skill.
 
-*Use the Amazon Developer Console or an Alexa-enabled device to test the skill.
-*Invoke the skill and provide input to add information to the Notion database.
-#Troubleshooting
+- Use the Amazon Developer Console or an Alexa-enabled device to test the skill.
+- Invoke the skill and provide input to add information to the Notion database
+
+# Troubleshooting
+
 If you encounter issues, make sure that:
 
-*Your environment variables are set correctly.
-*Your Notion database is set up properly.
-*Your Zapier account is connected to the Notion API and configured for NLA.
-*Your Alexa Skill is set up correctly with the correct intents, slots, and endpoint.
-If you still face issues, refer to the error logs or open an issue on the GitHub repository.
+- Your environment variables are set correctly.
+- Your Notion database is set up properly.
+- Your Zapier account is connected to the Notion API and configured for NLA.
+- Your Alexa Skill is set up correctly with the correct intents, slots, and endpoint.
+  If you still face issues, refer to the error logs or open an issue on the GitHub repository.
 
-#Contributing
+# Contributing
+
 Feel free to fork the repository, make changes, and submit a pull request if you think your changes can improve the project.
