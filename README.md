@@ -28,15 +28,18 @@ cd alexa-notion-integration
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-Set up your environment variables:
 ```
+
+3. Set up your environment variables:
+
+````
 
 ```bash
 export OPENAI_API_KEY="your_openai_api_key"
 export ZAPIER_NLA_API_KEY="your_zapier_nla_api_key"
-```
+````
 
-3. Run the Flask server:
+4. Run the Flask server:
 
 ```bash
 python app.py
